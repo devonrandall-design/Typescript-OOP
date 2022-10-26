@@ -83,6 +83,25 @@ class Player {
       }
     }
 
+    moveUp () {
+      if (this.posY <= 92) {
+        return
+      } else {
+        this.posY -= 100;
+        this.character.style.top = this.posY + 'px'
+      }
+    }
+
+    moveDown () {
+      if (this.posY >= 492) {
+        return
+      } else {
+        this.posY += 100;
+        this.character.style.top = this.posY + 'px'
+      }
+    }
+
+   
 
 
   }
@@ -93,11 +112,30 @@ class Player {
 
   playerOne.renderPlayer()
 
-  playerOne.character.addEventListener('keydown', handleMove)
+window.addEventListener('keydown', handleMove)
 
   function handleMove(e: KeyboardEvent) {
-    console.log(e)
+    if (e.code === 'ArrowRight') {
+      console.log(e.code)
+      playerOne.moveRight()
+    } else if (e.code === 'ArrowLeft') {
+    console.log(e.code)
+    playerOne.moveLeft()
+  } 
+  else if (e.code === 'ArrowUp') {
+    console.log(e.code)
+    playerOne.moveUp()
   }
+  else if (e.code === 'ArrowDown') {
+    console.log(e.code)
+    playerOne.moveDown()
+  }
+  else {
+    return
+  }
+  } 
+    
+  
 
 
 

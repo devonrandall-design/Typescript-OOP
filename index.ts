@@ -35,6 +35,7 @@ class Player {
   classType: string;
   width: number
   height: number
+  direction: any;
   
     constructor(pColor: string) {
       this.color = pColor;
@@ -44,6 +45,13 @@ class Player {
       this.classType = 'mainPlayer'
       this.height = 50;
       this.width = 50;
+      this.direction  = {
+        left: './Left.png',
+        right: './Right.png',
+        Up: './Up.png',
+        Down: './Down.png',
+
+      };
   
       
     }
@@ -67,6 +75,7 @@ class Player {
     }
 
     moveLeft () {
+      this.character.style.backgroundImage = `url(${this.direction.left})`
       if (this.posX <= 0) {
         return
       } else {

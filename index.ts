@@ -126,3 +126,79 @@ function handleMove(e: KeyboardEvent) {
     return;
   }
 }
+
+//PokeMon Battle
+
+class Pokemon {
+  stats: any;
+  moves: any;
+
+  constructor( stats, moves) {
+
+  this.stats = stats
+  this.moves = moves
+
+  }
+
+}
+
+const Bulbasaur = {
+
+  name: 'Bulbasaur',
+
+  stats: {
+    hp: 21,
+    atk: 12,
+    def: 11,
+    spAtk: 11,
+    spDef: 13,
+    spd: 11,
+  },
+
+  moves: {
+    tackle: [40, 100, ['Normal']],
+    growl: [0.8]
+  }
+
+
+}
+
+const Pickachu = {
+
+
+name: 'Pikachu',
+
+  stats: {
+    hp: 20,
+    atk: 13,
+    def: 10,
+    spAtk: 9,
+    spDef: 11,
+    spd: 15,
+  },
+
+  moves: {
+    tackle: [40, 100, ['Normal']],
+    growl: [0.8]
+  }
+
+
+}
+
+
+const myPoke = new Pokemon(Bulbasaur.stats, Bulbasaur.moves)
+
+const wildPoke = new Pokemon(Pickachu.stats, Pickachu.moves)
+
+console.log(myPoke.stats, myPoke.moves)
+
+function startBattle() {
+
+  while (myPoke.stats.hp || wildPoke.stats.hp >= 0) {
+ 
+  }
+
+
+}
+
+

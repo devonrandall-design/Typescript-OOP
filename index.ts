@@ -155,10 +155,10 @@ const Bulbasaur = {
     spd: 11,
   },
 
-  moves: {
-    tackle: [40, 100, ['Normal']],
-    growl: [0.8]
-  }
+  moves: [
+    ['tackle', [40, 100, 'Normal']],
+    ['growl', 0.8]
+  ]
 
 
 }
@@ -177,10 +177,13 @@ name: 'Pikachu',
     spd: 15,
   },
 
-  moves: {
-    tackle: [40, 100, ['Normal']],
-    growl: [0.8]
-  }
+  moves: [
+    // MoveName, [Power, Accuracy, Type]
+    ['tackle', [40, 100, 'Normal']],
+    ['growl', 0.8]
+  ]
+
+ 
 
 
 }
@@ -192,13 +195,24 @@ const wildPoke = new Pokemon(Pickachu.stats, Pickachu.moves)
 
 console.log(myPoke.stats, myPoke.moves)
 
-function startBattle() {
+function startBattle(playerPoke, enemyPoke) {
 
-  while (myPoke.stats.hp || wildPoke.stats.hp >= 0) {
- 
-  }
+  const battleScreen = document.createElement('div')
+
+  battleScreen.classList.add('battle')
+  gridDiv.append(battleScreen)
+
+
+  let playerStats = playerPoke.stats
+  let enemyStats = enemyPoke.stats
+
+  //
+
+
 
 
 }
 
-
+if (randomBattle!) {
+startBattle(myPoke, wildPoke)
+}

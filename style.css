@@ -51,6 +51,17 @@
   background-size: cover;
 }
 
+.battle {
+  position: absolute;
+  width: 500px;
+  height:500px;
+  background-image:url('https://hosting.photobucket.com/images/i/devonrandall_design/BattleBG.png?width=320&height=320&fit=bounds');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
 
 
 h1,

@@ -58,9 +58,10 @@ class Player {
       this.changeClass()
       this.character.style.left = this.posX + 'px'
       this.character.style.top = this.posY + 'px'
-      this.character.style.width = `70px`
-      this.character.style.height = `70px`
-      this.character.style.backgroundColor = this.color;
+      this.character.style.width = `80px`
+      this.character.style.height = `80px`
+      this.character.style.backgroundImage = `url(${this.color})`
+
 
   
     }
@@ -106,7 +107,7 @@ class Player {
 
   }
 
-  const playerOne = new Player('blue')
+  const playerOne = new Player('https://www.pngfind.com/pngs/m/476-4769662_pokemon-fire-red-character-png-download-pokemon-fire.png')
 
 
 

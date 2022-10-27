@@ -38,8 +38,8 @@ class Player {
   
     constructor(pColor: string) {
       this.color = pColor;
-      this.posX = 168
-      this.posY = 92
+      this.posX = 0
+      this.posY = 0
       this.character = document.createElement('div')
       this.classType = 'mainPlayer'
       this.height = 50;
@@ -66,7 +66,7 @@ class Player {
     }
 
     moveLeft () {
-      if (this.posX <= 168) {
+      if (this.posX <= 0) {
         return
       } else {
         this.posX -= 100;
@@ -75,7 +75,7 @@ class Player {
     }
 
     moveRight () {
-      if (this.posX >= 568) {
+      if (this.posX >= 400) {
         return
       } else {
         this.posX += 100;
@@ -84,7 +84,7 @@ class Player {
     }
 
     moveUp () {
-      if (this.posY <= 92) {
+      if (this.posY <= 0) {
         return
       } else {
         this.posY -= 100;
@@ -93,7 +93,7 @@ class Player {
     }
 
     moveDown () {
-      if (this.posY >= 492) {
+      if (this.posY >= 400) {
         return
       } else {
         this.posY += 100;

@@ -46,7 +46,7 @@
 }
 
 .mainPlayer {
-  position: absolute;
+  position: relative;
   border-radius: 50px;
 }
 
